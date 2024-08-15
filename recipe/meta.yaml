@@ -1,16 +1,16 @@
 {% set name = "kubernetes-kind" %}
-{% set version = "0.23.0" %}
+{% set version = "0.24.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url:  https://github.com/kubernetes-sigs/kind/archive/v{{ version }}.tar.gz
-  sha256: b8ea6665bc37a34de0a6fe7592fb8ae376847e1c93fc5d6377140a98c1aa6a55
+  url: https://github.com/kubernetes-sigs/kind/archive/v{{ version }}.tar.gz
+  sha256: eb7bcb8005ff980d7d7ad088165a5a6236f484444aa397520cd98cb046e1d797
 
 build:
-  skip: True  # [win]
+  skip: true  # [win]
   number: 0
 
 requirements:
@@ -28,7 +28,7 @@ test:
 about:
   summary: Kubernetes IN Docker - local clusters for testing Kubernetes
   home: https://github.com/kubernetes-sigs/kind
-  license:  Apache-2.0
+  license: Apache-2.0
   license_file:
     - LICENSE
     - thirdparty/
