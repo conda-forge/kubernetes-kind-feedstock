@@ -1,5 +1,5 @@
 {% set name = "kubernetes-kind" %}
-{% set version = "0.24.0" %}
+{% set version = "0.25.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/kubernetes-sigs/kind/archive/v{{ version }}.tar.gz
-  sha256: eb7bcb8005ff980d7d7ad088165a5a6236f484444aa397520cd98cb046e1d797
+  sha256: 016c36750be5c5fb81f70e4675ee0a4f278dd929f05273184ff68cae112ce71b
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
 
 requirements:
   build:
